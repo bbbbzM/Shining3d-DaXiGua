@@ -1047,7 +1047,7 @@ window.__require = function e(t, n, o) {
           this.canClick && 0 == cc.find("Canvas/uiEffectPanel").childrenCount && a.default.Instance.RestartGame()
         }, t.prototype.OnClickMoreGame = function () {
           this.canClick && (this.moreGameBtn.off(cc.Node.EventType.TOUCH_START, this.OnClickMoreGame, this), this.canClick = !1, this.moreGameBtn.runAction(cc.sequence(cc.scaleTo(.1, 1.1), cc.scaleTo(.1, 1))), this.scheduleOnce(function () {
-            window.location.href = "http://m.wesane.com/"
+            window.location.href = "https://mall.jd.com/index-761070.html"
           }, .15))
         }, t.prototype.GetContentByScore = function (e) {
           var t = Math.ceil(e / 1500 * 94);
@@ -1211,7 +1211,7 @@ window.__require = function e(t, n, o) {
               n.getComponent(cc.RigidBody).linearDamping = fruitSlowDown;
             }
             n.getComponent(cc.PhysicsCircleCollider).radius = 0;
-            // 让说过更 Q 弹
+            // 让水果更 Q 弹
             if (fruitQTan) {
               n.getComponent(cc.PhysicsCircleCollider).restitution = fruitQTan;
             }
@@ -2131,7 +2131,7 @@ window.__require = function e(t, n, o) {
             i = c.substring(c.lastIndexOf("/game/") + 1, c.length).split("/");
           i.length >= 2 && (a = i[1]), this.gameHttpId = a, cc.log("gameId", a);
           e.substring(e.lastIndexOf("//") + 4, e.lastIndexOf("com") + 3);
-          this.moreGameUrl = "http://m.wesane.com/"
+          this.moreGameUrl = "https://mall.jd.com/index-761070.html"
         },
         gameOverShowText: function (e, t) {
           this.ajaxLoad("http://www.wesane.com/admin.php/Gamescore/saveGamescore", "gameScore=" + e + "&gameId=" + this.gameHttpId + "&gameType=" + t, this.scoreResult)
@@ -3521,6 +3521,13 @@ window.__require = function e(t, n, o) {
                   // +1 变 -1
                   i.default.Instance.createLevelUpFruit(o.fruitNumber + fruitVolume, n.node.position);
                 var e = cc.find("Canvas/upEffectParent").getChildByName("daxigua");
+                //合成了大西瓜
+                let intervalID=window.setTimeout(popOutMiMiLianJie,2000);
+                function popOutMiMiLianJie(){
+                  console.log("合成了大西瓜!!!");
+                  document.getElementById("shengMiLianJie").style.display="block";
+                  window.clearTimeout(intervalID);
+                }
                 e.active = !0, e.opacity = 0, cc.tween(e).to(.5, {
                   opacity: 150
                 }).start();
