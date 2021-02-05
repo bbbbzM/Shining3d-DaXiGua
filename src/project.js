@@ -1851,7 +1851,7 @@ window.__require = function e(t, n, o) {
         cc.director.getCollisionManager().enabled = !0, cc.director.getPhysicsManager().enabled = !0, this.gameOveEndBool = !1, this.gameOverNum = 0, this.gameWidth = cc.winSize.width, this.gameHeight = cc.winSize.height, o.playNum, o.playNum++, c.loadingLayer("panel/LinkIconSpr"), o.mainGameJs = this, o.publicGameBool || this.play()
       },
       play: function () {
-        console.log(1);
+        console.log("test");
         var e = this;
         adBreak({
           type: "next",
@@ -2135,6 +2135,7 @@ window.__require = function e(t, n, o) {
         },
         gameOverShowText: function (e, t) {
           this.ajaxLoad("http://www.wesane.com/admin.php/Gamescore/saveGamescore", "gameScore=" + e + "&gameId=" + this.gameHttpId + "&gameType=" + t, this.scoreResult)
+          console.log("test");
         },
         gamePV_load: function () {
           this.ajaxLoad("http://www.wesane.com/admin.php/Activityshow/gamelogo", "gameID=" + this.gameHttpId, this.ajaxOnLogoResult)
@@ -3933,7 +3934,7 @@ window.__require = function e(t, n, o) {
         startT: cc.Label
       },
       onLoad: function () {
-        a.publicGameBool && c.init(), this.showInfoT.string = c.gameInfoText, this.startT.string = c.txtStartText, this.node.on("touchend", function (e) {
+        a.publicGameBool && c.init(), this.showInfoT.string = c.gameInfoText+"testtest", this.startT.string = c.txtStartText, this.node.on("touchend", function (e) {
           this.node.x = -2e3
         }, this)
       },
